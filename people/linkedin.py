@@ -47,7 +47,7 @@ class Linkedin():
             print('Choose the correct company: ')
             i = 0
             for company in self.companies:
-                print(f"[{i + 1}]  {company['Name']}")
+                print(f"{i + 1}  {company['Name']}")
                 i += 1
 
             while True:

@@ -4,7 +4,7 @@ import json
 import mysql.connector
 import keys
 
-MAX_SEARCH_RESULT = 100
+MAX = 100
 
 
 class Linkedin():
@@ -65,7 +65,7 @@ class Linkedin():
     def collect_employees(self, company_id):
         linkedin_dict = {}
         try:
-            for page in range(0, MAX_SEARCH_RESULT, 10):  # How many result pages to lookup
+            for page in range(0, MAX, 10):
                 url = f'https://www.linkedin.com/voyager/api/search/blended?count=10&filters=List(currentCompany-%3E{company_id},resultType-%3EPEOPLE)&origin=OTHER&q=all&queryContext=List(spellCorrectionEnabled-%3Etrue,relatedSearchesEnabled-%3Etrue)&start={page}'
                 req = requests.get(url, headers=self.headers)
                 json_res = json.loads(req.text)

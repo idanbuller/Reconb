@@ -19,7 +19,7 @@ class Mail_builder():
                 host="localhost",
                 user=f"{keys.mysql_username}",
                 passwd=f"{keys.mysql_password}",
-                database="Reconb"
+                database="reconb"
             )
             mycursor = mydb.cursor()
             mycursor.execute(f"SELECT Name FROM {self.table}_workers")

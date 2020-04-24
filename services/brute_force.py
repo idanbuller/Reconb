@@ -10,7 +10,7 @@ def a_lookup(record):
         for ip in answers:
             return ip
     except Exception as e:
-        return "Could not resolve"
+        return "0.0.0.0"
 
 
 def main(domain, table):
@@ -45,6 +45,7 @@ def main(domain, table):
                 continue
             else:
                 actual_records[key] = str(value)
+        for key, value in actual_records.items():
             sql = f"INSERT INTO {table}_services (Subdomain, Ip, ModuleName) VALUES (%s, %s, %s)"
             val = (key, value, 'Bruteforce')
             mycursor.execute(sql, val)

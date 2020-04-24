@@ -71,7 +71,7 @@ for x in myresult:
             except mysql.connector.errors.Error as e:
                 print(f"Mysql Error: {e}")
             finally:
-                continue
+                pass
 
 
     def run_scanner(threads, mode):

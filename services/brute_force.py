@@ -10,7 +10,7 @@ def a_lookup(record):
         for ip in answers:
             return ip
     except Exception as e:
-        return "0.0.0.0"
+        return "Could not resolve"
 
 
 def main(domain, table):

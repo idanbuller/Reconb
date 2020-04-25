@@ -10,7 +10,7 @@ class Dirbuster():
 
 
     def wordlist(self):
-        print("extra/dirbuster Module running...")
+        print("extra/web_services Module running...")
         l = ['ServiceDefinition', 'admin', 'atom', 'axis', 'context', 'default', 'disco', 'extwsdl', 'index', 'inquire', 'inquiryapi', 'inspection', 'interface', 'interfaces', 'jboss-net', 'jbossws', 'juddi', 'manual', 'methods', 'name', 'names', 'operation', 'operations', 'oracle', 'proxy', 'publish', 'publishing', 'query', 'rss', 'service', 'services', 'svce', 'uddi', 'uddiexplorer', 'uddigui', 'uddilistener', 'uddisoap', 'webservice', 'webserviceclient', 'webserviceclient+ssl', 'webservices', 'ws', 'ws4ee', 'wsatom', 'wsdl', 'wsgw', 'wsil', 'xmethods\n']
         dirs = []
         for i in l:

@@ -34,6 +34,6 @@ class Wappalyzer():
 
                 print("version: " + res2['version'])
 
-        except:
+        except Exception as e:
             print(f'Cannot find {self.domain}')
 

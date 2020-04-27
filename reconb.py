@@ -2,7 +2,7 @@
 from services import hacker_target, google_domains, banner, brute_force
 from people import hunter_io, mail_builder, linkedin
 from extra import dorks, vt, pastebin, web_services, robots, admin_panels
-from bonus import wappalyzer, reverse
+from bonus import wappalyzer, reverse, webalayzer
 import mysql.connector, csv, validators
 from prettytable import PrettyTable
 from tabulate import tabulate
@@ -48,6 +48,7 @@ class Reconb():
         mail_builder.Mail_builder(self.domain).builder()
 
     def wappalyzer(self):
+        webalayzer.Webalayzer(self.domain).web()
         wappalyzer.Wappalyzer(self.domain).wap()
 
     def extra(self):

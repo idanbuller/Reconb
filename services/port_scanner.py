@@ -84,7 +84,7 @@ for x in myresult:
             thread.start()
         for thread in thread_list:
             thread.join()
-        print("Open ports are:", open_ports)
+        #print("Open ports are:", open_ports)
 
     run_scanner(100, 3)
 

@@ -1,7 +1,10 @@
 #!/usr/bin/env python3
 from random import randint
-import googlesearch
+from googlesearch import search
 from services import userage
+import ssl
+ssl._create_default_https_context = ssl._create_unverified_context
+
 
 class Pastes:
 
@@ -18,12 +21,11 @@ class Pastes:
         final = []
         query = f"inurl:pastebin.com AND intext:{self.__domain}"
         try:
-            results = [url for url in googlesearch.search(
-                query, num=self.__search_max, start=0,
-                stop=self.__search_max, pause=self.__delay, extra_params={"filter": "0"}, user_agent=self.__user_agent)]
-            final.extend(results)
+            res = search(query, num=self.__search_max, start=0, stop=self.__search_max, pause=self.__delay, user_agent=self.__user_agent)
+            final.extend(res)
         except Exception as err:
             raise err
+
         # print(final)
         with open(self.file, 'a') as f:
             print("[*] Creating pastebin.txt file [*]")

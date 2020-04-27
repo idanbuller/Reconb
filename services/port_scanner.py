@@ -87,4 +87,4 @@ for x in myresult:
         #print("Open ports are:", open_ports)
 
     run_scanner(100, 3)
-    print("Portscanner added to table")
+print("Portscanner added to table")

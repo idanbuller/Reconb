@@ -16,7 +16,7 @@ class Webalayzer():
             for i in range(len(report['tech'])):
                 x.add_row([f"{report['tech'][i]['name']}", f"{report['tech'][i]['version']}", "WebTech"])
             for i in range(len(report['headers'])):
-                x.add_row([f"{report['headers'][i]['value']}", f"{report['headers'][i]['value']}", "WebTech"])
+                x.add_row([f"{report['headers'][i]['name']}", f"{report['headers'][i]['value']}", "WebTech"])
             print(x)
 
         except webtech.utils.ConnectionException:
